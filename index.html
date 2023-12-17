@@ -66,21 +66,21 @@
     <!-- Sertakan pustaka QRious -->
     <script src="node_modules/qrious/dist/qrious.min.js"></script>
     <script>
-        function generateQR() {
-            let qrInput = document.getElementById('qrInput').value;
-            let canvas = document.getElementById('canvas');
-            let qr = new QRious({
-                element: canvas,
-                value: qrInput
-            });
+       function generateQR() {
+    let qrInput = document.getElementById('qrInput').value;
+    let canvas = document.getElementById('canvas');
+    let qr = new QRious({
+        element: canvas,
+        value: qrInput
+    });
 
-            // Tampilkan barcode terlebih dahulu
-            // (Anda mungkin ingin menyesuaikan tata letak ini)
-            document.getElementById('downloadButton').style.display = 'block';
+    // Tampilkan barcode terlebih dahulu
+    // (Anda mungkin ingin menyesuaikan tata letak ini)
+    document.getElementById('downloadButton').style.display = 'block';
 
-            // Tampilkan alert setelah barcode terlihat
-            alert('Your barcode generated successfully! Want to download your barcode?');
-        }
+    // Tampilkan barcode setelah di-generate (tanpa alert)
+}
+
 
         // Fungsi untuk mengunduh barcode
         function downloadQR() {
